@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product - NovaShop</title><link rel="stylesheet" href="style.css">
+  <script src="https://cdn.c360a.salesforce.com/beacon/c360a/66c0e85b-17f9-4bbe-9669-158adb41aea4/scripts/c360a.min.js"></script>
+</head>
+<body>
+<header><a class="logo" href="index.html">NovaShop</a><nav><a href="index.html">Home</a><a href="products.html">Products</a><a href="about.html">About</a></nav></header>
+<main><section class="form-card">
+<p class="eyebrow">Product Detail</p>
+<h1 id="productName">Product</h1>
+<p id="productDescription"></p>
+<strong id="productPrice"></strong>
+<p style="margin-top:1rem;">This page is used to test Salesforce Personalization catalog tracking.</p>
+<a class="btn" href="products.html">Back to Products</a>
+</section></main>
+<footer>NovaShop Personalization Demo</footer>
+<script>
+const products = {
+  P001: {name:"Wireless Headphones", description:"Comfortable everyday headphones.", price:"₹2,499"},
+  P002: {name:"Smart Watch", description:"Fitness and notifications on your wrist.", price:"₹3,999"},
+  P003: {name:"Travel Backpack", description:"Lightweight backpack for everyday travel.", price:"₹1,799"}
+};
+const id = new URLSearchParams(location.search).get("id") || "P001";
+const p = products[id] || products.P001;
+document.getElementById("productName").textContent = p.name;
+document.getElementById("productDescription").textContent = p.description;
+document.getElementById("productPrice").textContent = p.price;
+</script>
+</body></html>
