@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - NovaShop</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><a class="logo" href="index.html">NovaShop</a><nav><a href="index.html">Home</a><a href="products.html">Products</a><a href="about.html">About</a></nav></header>
+<main><section class="form-card"><p class="eyebrow">Test Known Visitor</p><h1>Tell us about yourself</h1><p>This form is only for testing. Later we can connect form fields to Salesforce/Data Cloud identity.</p>
+<form id="demoForm"><label>First Name<input id="firstName" required></label><label>Email<input id="email" type="email" required></label><button class="btn" type="submit">Submit</button></form><p id="result"></p></section></main>
+<footer>NovaShop Personalization Demo</footer>
+<script>
+document.getElementById('demoForm').addEventListener('submit', e => {
+ e.preventDefault();
+ document.getElementById('result').textContent = 'Test form submitted successfully.';
+});
+</script>
+</body></html>

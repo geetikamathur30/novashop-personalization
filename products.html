@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - NovaShop</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><a class="logo" href="index.html">NovaShop</a><nav><a href="index.html">Home</a><a href="products.html">Products</a><a href="about.html">About</a></nav></header>
+<main><section><p class="eyebrow">Product Catalog</p><h1>Browse our products</h1><div class="grid">
+<article class="product" data-product-id="P001"><div class="product-img">🎧</div><h2>Wireless Headphones</h2><p>Comfortable everyday headphones.</p><strong>₹2,499</strong><button class="btn product-btn">View Product</button></article>
+<article class="product" data-product-id="P002"><div class="product-img">⌚</div><h2>Smart Watch</h2><p>Fitness and notifications on your wrist.</p><strong>₹3,999</strong><button class="btn product-btn">View Product</button></article>
+<article class="product" data-product-id="P003"><div class="product-img">🎒</div><h2>Travel Backpack</h2><p>Lightweight backpack for everyday travel.</p><strong>₹1,799</strong><button class="btn product-btn">View Product</button></article>
+</div></section></main>
+<footer>NovaShop Personalization Demo</footer>
+<script>
+document.querySelectorAll('.product-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const product = btn.closest('.product');
+    alert('You viewed: ' + product.querySelector('h2').textContent);
+  });
+});
+</script>
+</body></html>
